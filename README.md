@@ -38,20 +38,20 @@ to predict simultaneously:
 
 ## Models
 
-### Emotion Recognition (GRU)
+### GRU Baseline (GRU_Audio.ipynb)
 
 - **File**: `audio_weights_emotion.hdf5`, `audio_weights_sentiment.hdf5`
 - **Architecture**: Bidirectional GRU + masking + time-distributed layers  
-- **Input**: 1,611 acoustic features per time frame  
-- **Output**: 7 classes (neutral, joy, sadness, anger, surprise, fear, disgust)  
+- **Input**: 1,611 acoustic features per time frame (Emotion), 1,422 acoustic features per time frame  (Sentiment)
+- **Output**: 7 classes (neutral, joy, sadness, anger, surprise, fear, disgust), 3 classes (neutral, positive, negative) 
 - **Optimizer**: Adam  
 
-### Sentiment Recognition (LSTM)
+### LSTM Improved (LSTM_AUdio.ipynb)
 
-- **File**: `.wav` conver video to audio  
+- **File**: `.wav` convert video clips to audio files (.wav)  
 - **Architecture**: Two-layer Bidirectional LSTM + masking + time-distributed layers  
-- **Input**: 1,422 acoustic features per time frame  
-- **Output**: 3 classes (neutral, positive, negative)  
+- **Input**: 1,611 acoustic features per time frame (Emotion), 1,422 acoustic features per time frame  
+- **Output**: 7 classes (neutral, joy, sadness, anger, surprise, fear, disgust), 3 classes (neutral, positive, negative)  
 - **Optimizer**: Adadelta  
 
 ---
@@ -60,8 +60,7 @@ to predict simultaneously:
 
 | Model              | Accuracy | F1-Score |
 |--------------------|---------:|---------:|
-| **GRU (Emotion)**  |    9.17% |     0.04 |
-| **LSTM (Sentiment)**|   25.01% |     0.18 |
+| **GRU**            |    9.17% |     0.04 |
 | **LSTM (Both)**    |   48.12% |     0.31 |
 
 ---
@@ -70,5 +69,5 @@ to predict simultaneously:
 
 1. Clone this repo  
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/TarunSadarla2606/DL_Project
    cd your-repo
