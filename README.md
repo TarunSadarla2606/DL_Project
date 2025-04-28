@@ -65,11 +65,11 @@ We first perform detailed EDA to understand label distributions, conversation fl
 
     - Joy: 1,743 instances
 
-    - Sadness: 1,205 instances
+    - Sadness: 683 instances
 
     - Anger: 1,109 instances
 
-    - Surprise: 683 instances
+    - Surprise: 1,205 instances
 
     - Fear: 271 instances
 
