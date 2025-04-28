@@ -50,12 +50,36 @@ We first perform detailed EDA to understand label distributions, conversation fl
   - Identify class imbalance and potential data issues.
 
 - **Findings:**
+  **Sentiment Class Distribution - Training set**
+    - Neutral: 4,710 instances
 
-  - 'Neutral' dominates both sentiment and emotion classes, causing label imbalance.
+    - Positive: 2,945 instances
 
-  - Most utterances are short, favoring sequence-based models.
+    - Negative: 2,334 instances
 
-  - Emotion transitions within conversations show meaningful patterns (e.g., anger → sadness).
+  **Observation:**
+  - Neutral sentiment is the most common, followed by positive and negative.
+
+  **Emotion Class Distribution - Training set**
+    - Neutral: 4,710 instances
+
+    - Joy: 1,743 instances
+
+    - Sadness: 1,205 instances
+
+    - Anger: 1,109 instances
+
+    - Surprise: 683 instances
+
+    - Fear: 271 instances
+
+    - Disgust: 268 instances
+
+  **Observation:**
+
+  - Neutral emotion dominates.
+
+  - Fear and Disgust have very few examples — leading to a strong class imbalance.
 
 - **Impact:**
 
@@ -98,3 +122,9 @@ We first perform detailed EDA to understand label distributions, conversation fl
    ```bash
    git clone https://github.com/TarunSadarla2606/DL_Project
    cd your-repo
+
+## Citation
+
+S. Poria, D. Hazarika, N. Majumder, G. Naik, E. Cambria, R. Mihalcea. MELD: A Multimodal Multi-Party Dataset for Emotion Recognition in Conversation. ACL 2019.
+
+Chen, S.Y., Hsu, C.C., Kuo, C.C. and Ku, L.W. EmotionLines: An Emotion Corpus of Multi-Party Conversations. arXiv preprint arXiv:1802.08379 (2018).
