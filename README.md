@@ -3,14 +3,13 @@
 ## Table of Contents
 
 - [Overview](#overview)  
-- [Features](#features)  
+- [Features](#features)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 - [Models](#models)  
   - [Emotion Recognition (GRU)](#emotion-recognition-gru)  
   - [Sentiment Recognition (LSTM)](#sentiment-recognition-lstm)  
 - [Performance](#performance)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Feature Extraction](#feature-extraction)  
+- [Installation](#installation) 
 - [Citation](#citation)  
 - [License](#license) 
 
@@ -26,13 +25,41 @@ This project fuses:
 to predict simultaneously:  
 - **Sentiment**: positive / neutral / negative  
 - **Emotion**: anger / disgust / sadness / joy / neutral / surprise / fear  
-
+We first perform detailed EDA to understand label distributions, conversation flows, and utterance characteristics before modeling.
 ---
 
 ## Features
 
 - **Dual-label output**: Sentiment + Emotion  
 - **Pretrained** on the MELD dataset for quick prototyping  
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+- An extensive EDA was conducted to better understand the MELD dataset before modeling.
+
+- **Notebook:** eda-meld.ipynb
+
+- **Goals:**
+
+- Analyze sentiment and emotion label distributions.
+
+- utterance length and conversation structures.
+
+- Identify class imbalance and potential data issues.
+
+- **Findings:**
+
+- 'Neutral' dominates both sentiment and emotion classes, causing label imbalance.
+
+- Most utterances are short, favoring sequence-based models.
+
+- Emotion transitions within conversations show meaningful patterns (e.g., anger → sadness).
+
+- **Impact:**
+
+- Insights from EDA guide model design, loss weighting, and data augmentation strategies.
 
 ---
 
