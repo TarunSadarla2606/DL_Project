@@ -121,7 +121,20 @@ We first perform detailed EDA to understand label distributions, conversation fl
 1. Clone this repo  
    ```bash
    git clone https://github.com/TarunSadarla2606/DL_Project
-   cd your-repo
+   cd DL_Project
+
+2. Create a virtual environment (recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+4. Start Jupyter Notebook:
+  ```bash
+  jupyter notebook
 
 ## Citation
 
