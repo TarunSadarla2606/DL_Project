@@ -43,23 +43,23 @@ We first perform detailed EDA to understand label distributions, conversation fl
 
 - **Goals:**
 
-- Analyze sentiment and emotion label distributions.
+  - Analyze sentiment and emotion label distributions.
 
-- utterance length and conversation structures.
+  - utterance length and conversation structures.
 
-- Identify class imbalance and potential data issues.
+  - Identify class imbalance and potential data issues.
 
 - **Findings:**
 
-- 'Neutral' dominates both sentiment and emotion classes, causing label imbalance.
+  - 'Neutral' dominates both sentiment and emotion classes, causing label imbalance.
 
-- Most utterances are short, favoring sequence-based models.
+  - Most utterances are short, favoring sequence-based models.
 
-- Emotion transitions within conversations show meaningful patterns (e.g., anger → sadness).
+  - Emotion transitions within conversations show meaningful patterns (e.g., anger → sadness).
 
 - **Impact:**
 
-- Insights from EDA guide model design, loss weighting, and data augmentation strategies.
+  - Insights from EDA guide model design, loss weighting, and data augmentation strategies.
 
 ---
 
