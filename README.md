@@ -133,9 +133,9 @@ We first perform detailed EDA to understand label distributions, conversation fl
    pip install -r requirements.txt
 
 4. Start Jupyter Notebook:
-  ```bash
-  jupyter notebook
-  ```
+   ```bash
+   jupyter notebook
+   ```
 
 ## Citation
 
